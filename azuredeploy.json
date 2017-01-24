@@ -82,7 +82,7 @@
     }
   },
     "variables": {
-        "github": "https://raw.githubusercontent.com/arnaudlh/SAP-2tiers/tree/master/shared",
+        "github": "https://raw.githubusercontent.com/arnaudlh/SAP-2tiers/master/shared",
         "images": {
             "Windows Server 2012 Datacenter": {
                 "sku": "2012-Datacenter",
