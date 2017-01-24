@@ -146,7 +146,7 @@
         "vmSizes": {
             "Xtra Small - 2.300 SAPS": {
                 "Premium": {
-                    "size": "Standard_DS11"
+                    "size": "Standard_DS11_v2"
                 },
                 "Standard": {
                     "size": "Standard_D11"
@@ -154,7 +154,7 @@
             },
             "Small - 4.400 SAPS": {
                 "Premium": {
-                    "size": "Standard_DS12"
+                    "size": "Standard_DS12_v2"
                 },
                 "Standard": {
                     "size": "Standard_D12"
@@ -162,7 +162,7 @@
             },
             "Medium - 11.000 SAPS": {
                 "Premium": {
-                    "size": "Standard_DS14"
+                    "size": "Standard_DS14_v2"
                 },
                 "Standard": {
                     "size": "Standard_D14"
@@ -170,7 +170,7 @@
             },
             "Large - 22.000 SAPS": {
                 "Premium": {
-                    "size": "Standard_DS15"
+                    "size": "Standard_DS15_v2"
                 },
                 "Standard": {
                     "size": "Standard_D15"
