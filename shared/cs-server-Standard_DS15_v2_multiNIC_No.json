@@ -112,7 +112,7 @@
             "name": "dbdisk5",
             "lun": 4,
             "vhd": {
-                "uri": "[concat('http://',parameters('storageAccountName'),'.blob.core.windows.net/', parameters('vmName'), '/',parameters('sidlower'),'-dbdisk1.vhd')]"
+                "uri": "[concat('http://',parameters('storageAccountName'),'.blob.core.windows.net/', parameters('vmName'), '/',parameters('sidlower'),'-dbdisk5.vhd')]"
             },
             "createOption": "Empty",
             "caching": "None",
@@ -122,7 +122,7 @@
             "name": "dbdisk6",
             "lun": 5,
             "vhd": {
-                "uri": "[concat('http://',parameters('storageAccountName'),'.blob.core.windows.net/', parameters('vmName'), '/',parameters('sidlower'),'-dbdisk1.vhd')]"
+                "uri": "[concat('http://',parameters('storageAccountName'),'.blob.core.windows.net/', parameters('vmName'), '/',parameters('sidlower'),'-dbdisk6.vhd')]"
             },
             "createOption": "Empty",
             "caching": "None",
