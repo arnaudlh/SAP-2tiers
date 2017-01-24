@@ -81,102 +81,102 @@
       }
     }
   },
-  "variables": {
-    "github": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sap-2-tier-marketplace-image/shared/",
-    "images": {
-      "Windows Server 2012 Datacenter": {
-        "sku": "2012-Datacenter",
-        "offer": "WindowsServer",
-        "publisher": "MicrosoftWindowsServer",
-        "OSType": "Windows"
-      },
-      "Windows Server 2012 R2 Datacenter": {
-        "sku": "2012-R2-Datacenter",
-        "offer": "WindowsServer",
-        "publisher": "MicrosoftWindowsServer",
-        "OSType": "Windows"
-      },
-      "Windows Server 2016 Datacenter": {
-        "sku": "2016-Datacenter",
-        "offer": "WindowsServer",
-        "publisher": "MicrosoftWindowsServer",
-        "OSType": "Windows"
-      },
-      "SLES 12": {
-        "sku": "12-SP1",
-        "offer": "SLES",
-        "publisher": "SUSE",
-        "OSType": "Linux"
-      },
-      "RHEL 7.2": {
-        "sku": "7.2",
-        "offer": "RHEL",
-        "publisher": "RedHat",
-        "OSType": "Linux"
-      }
-    },
-    "imageSku": "[variables('images')[parameters('osType')].sku]",
-    "imagePublisher": "[variables('images')[parameters('osType')].publisher]",
-    "imageOffer": "[variables('images')[parameters('osType')].offer]",
-    "internalOSType": "[variables('images')[parameters('osType')].OSType]",
-    "csExtension": {
-      "Windows": {
-        "Publisher": "Microsoft.Compute",
-        "Name": "CustomScriptExtension",
-        "Version": "1.7",
-        "script": "[concat(variables('github'), 'configureSAPVM.ps1')]",
-        "scriptCall": "powershell.exe -ExecutionPolicy bypass -File configureSAPVM.ps1"
-      },
-      "Linux": {
-        "Publisher": "Microsoft.Azure.Extensions",
-        "Name": "CustomScript",
-        "Version": "2.0",
-        "script": "[concat(variables('github'), 'configureSAPVM.sh')]",
-        "scriptCall": "sh configureSAPVM.sh"
-      }
-    },
-    "cseExtPublisher": "[variables('csExtension')[variables('internalOSType')].Publisher]",
-    "cseExtName": "[variables('csExtension')[variables('internalOSType')].Name]",
-    "cseExtVersion": "[variables('csExtension')[variables('internalOSType')].Version]",
-    "storageTypes": {
-      "Premium": "Premium_LRS",
-      "Standard": "Standard_LRS"
-    },
-    "internalStorageType": "[variables('storageTypes')[parameters('storageType')]]",
-    "vmSizes": {
-      "Xtra Small - 2.300 SAPS": {
-        "Premium": {
-          "size": "Standard_DS11"
-        },
-        "Standard": {
-          "size": "Standard_D11"
-        }
-      },
-      "Small - 4.400 SAPS": {
-        "Premium": {
-          "size": "Standard_DS12"
-        },
-        "Standard": {
-          "size": "Standard_D12"
-        }
-      },
-      "Medium - 11.000 SAPS": {
-        "Premium": {
-          "size": "Standard_DS14"
-        },
-        "Standard": {
-          "size": "Standard_D14"
-        }
-      },
-        "Large - 22.000 SAPS": {
-            "Premium": {
-                "size": "Standard_DS15"
+    "variables": {
+        "github": "https://raw.githubusercontent.com/arnaudlh/SAP-2tiers/tree/master/shared",
+        "images": {
+            "Windows Server 2012 Datacenter": {
+                "sku": "2012-Datacenter",
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "OSType": "Windows"
             },
-            "Standard": {
-                "size": "Standard_D15"
+            "Windows Server 2012 R2 Datacenter": {
+                "sku": "2012-R2-Datacenter",
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "OSType": "Windows"
+            },
+            "Windows Server 2016 Datacenter": {
+                "sku": "2016-Datacenter",
+                "offer": "WindowsServer",
+                "publisher": "MicrosoftWindowsServer",
+                "OSType": "Windows"
+            },
+            "SLES 12": {
+                "sku": "12-SP1",
+                "offer": "SLES",
+                "publisher": "SUSE",
+                "OSType": "Linux"
+            },
+            "RHEL 7.2": {
+                "sku": "7.2",
+                "offer": "RHEL",
+                "publisher": "RedHat",
+                "OSType": "Linux"
             }
         },
-        "Extra large - 33.000 SAPS": {
+        "imageSku": "[variables('images')[parameters('osType')].sku]",
+        "imagePublisher": "[variables('images')[parameters('osType')].publisher]",
+        "imageOffer": "[variables('images')[parameters('osType')].offer]",
+        "internalOSType": "[variables('images')[parameters('osType')].OSType]",
+        "csExtension": {
+            "Windows": {
+                "Publisher": "Microsoft.Compute",
+                "Name": "CustomScriptExtension",
+                "Version": "1.7",
+                "script": "[concat(variables('github'), 'configureSAPVM.ps1')]",
+                "scriptCall": "powershell.exe -ExecutionPolicy bypass -File configureSAPVM.ps1"
+            },
+            "Linux": {
+                "Publisher": "Microsoft.Azure.Extensions",
+                "Name": "CustomScript",
+                "Version": "2.0",
+                "script": "[concat(variables('github'), 'configureSAPVM.sh')]",
+                "scriptCall": "sh configureSAPVM.sh"
+            }
+        },
+        "cseExtPublisher": "[variables('csExtension')[variables('internalOSType')].Publisher]",
+        "cseExtName": "[variables('csExtension')[variables('internalOSType')].Name]",
+        "cseExtVersion": "[variables('csExtension')[variables('internalOSType')].Version]",
+        "storageTypes": {
+            "Premium": "Premium_LRS",
+            "Standard": "Standard_LRS"
+        },
+        "internalStorageType": "[variables('storageTypes')[parameters('storageType')]]",
+        "vmSizes": {
+            "Xtra Small - 2.300 SAPS": {
+                "Premium": {
+                    "size": "Standard_DS11"
+                },
+                "Standard": {
+                    "size": "Standard_D11"
+                }
+            },
+            "Small - 4.400 SAPS": {
+                "Premium": {
+                    "size": "Standard_DS12"
+                },
+                "Standard": {
+                    "size": "Standard_D12"
+                }
+            },
+            "Medium - 11.000 SAPS": {
+                "Premium": {
+                    "size": "Standard_DS14"
+                },
+                "Standard": {
+                    "size": "Standard_D14"
+                }
+            },
+            "Large - 22.000 SAPS": {
+                "Premium": {
+                    "size": "Standard_DS15"
+                },
+                "Standard": {
+                    "size": "Standard_D15"
+                }
+            },
+            "Extra large - 33.000 SAPS": {
                 "Premium": {
                     "size": "Standard_GS5"
                 },
@@ -184,41 +184,41 @@
                     "size": "Standard_D14"
                 }
             }
+        },
+        "vmSize": "[variables('vmSizes')[parameters('sapSystemSize')][parameters('storageType')].size]",
+        "nicConfigurations": {
+            "new": {
+                "countPublicIp": 1,
+                "countNSG": 1
+            },
+            "existing": {
+                "countPublicIp": 0,
+                "countNSG": 0
+            }
+        },
+        "countPublicIp": "[variables('nicConfigurations')[parameters('newOrExistingSubnet')].countPublicIp]",
+        "countNSG": "[variables('nicConfigurations')[parameters('newOrExistingSubnet')].countNSG]",
+        "sidlower": "[toLower(parameters('sapSystemId'))]",
+        "vmName": "[concat(variables('sidlower'), '-servercs')]",
+        "storageAccountName": "[concat(variables('sidlower'), uniqueString(variables('sidlower'), resourceGroup().id))]",
+        "vnetName": "[concat(variables('sidlower'), '-vnet')]",
+        "publicIpName": "[concat(variables('sidlower'), '-pib')]",
+        "nicName": "[concat(variables('sidlower'), '-nic')]",
+        "nsgName": "[concat(variables('sidlower'), '-nsg-cs')]",
+        "publicIPAddressType": "Dynamic",
+        "addressPrefix": "10.0.0.0/16",
+        "subnetName": "TSS-SAP",
+        "subnetPrefix": "10.0.0.0/24",
+        "nestedDeploymentName": "nestedTemplate",
+        "nestedDeploymentNameProf": "[concat(variables('nestedDeploymentName'), 'prof')]",
+        "nestedDeploymentNameVnet": "[concat(variables('nestedDeploymentName'), 'vnet')]",
+        "nestedDeploymentNameNSG": "[concat(variables('nestedDeploymentName'), 'nsg')]",
+        "nestedDeploymentNameNIC": "[concat(variables('nestedDeploymentName'), 'nic')]",
+        "nestedDeploymentNamePIP": "[concat(variables('nestedDeploymentName'), 'pip')]",
+        "osDiskType": "image",
+        "apiVerion": "2015-06-15",
+        "apiVerionRm": "2015-01-01"
     },
-    "vmSize": "[variables('vmSizes')[parameters('sapSystemSize')][parameters('storageType')].size]",
-    "nicConfigurations": {
-      "new": {
-        "countPublicIp": 1,
-        "countNSG": 1
-      },
-      "existing": {
-        "countPublicIp": 0,
-        "countNSG": 0
-      }
-    },
-    "countPublicIp": "[variables('nicConfigurations')[parameters('newOrExistingSubnet')].countPublicIp]",
-    "countNSG": "[variables('nicConfigurations')[parameters('newOrExistingSubnet')].countNSG]",
-    "sidlower": "[toLower(parameters('sapSystemId'))]",
-    "vmName": "[concat(variables('sidlower'), '-servercs')]",
-    "storageAccountName": "[concat(variables('sidlower'), uniqueString(variables('sidlower'), resourceGroup().id))]",
-    "vnetName": "[concat(variables('sidlower'), '-vnet')]",
-    "publicIpName": "[concat(variables('sidlower'), '-pib')]",
-    "nicName": "[concat(variables('sidlower'), '-nic')]",
-    "nsgName": "[concat(variables('sidlower'), '-nsg-cs')]",
-    "publicIPAddressType": "Dynamic",
-    "addressPrefix": "10.0.0.0/16",
-    "subnetName": "TSS-SAP",
-    "subnetPrefix": "10.0.0.0/24",
-    "nestedDeploymentName": "nestedTemplate",
-    "nestedDeploymentNameProf": "[concat(variables('nestedDeploymentName'), 'prof')]",
-    "nestedDeploymentNameVnet": "[concat(variables('nestedDeploymentName'), 'vnet')]",
-    "nestedDeploymentNameNSG": "[concat(variables('nestedDeploymentName'), 'nsg')]",
-    "nestedDeploymentNameNIC": "[concat(variables('nestedDeploymentName'), 'nic')]",
-    "nestedDeploymentNamePIP": "[concat(variables('nestedDeploymentName'), 'pip')]",
-    "osDiskType": "image",
-    "apiVerion": "2015-06-15",
-    "apiVerionRm": "2015-01-01"
-  },
   "resources": [
     {
       "type": "Microsoft.Storage/storageAccounts",
