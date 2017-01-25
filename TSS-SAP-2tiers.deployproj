@@ -40,6 +40,7 @@
     <Content Include="shared\cs-server-Standard_DS12_v2_multiNIC_No.json" />
     <Content Include="shared\cs-server-Standard_DS11_v2_multiNIC_No.json" />
     <Content Include="shared\cs-server-Standard_DS13_v2_multiNIC_No.json" />
+    <Content Include="shared\cs-server-Standard_D15_v2_multiNIC_No.json" />
     <Content Include="shared\cs-server-Standard_DS15_v2_multiNIC_No.json" />
     <Content Include="shared\cs-server-Standard_DS14_v2_multiNIC_No.json" />
     <Content Include="shared\cs-server-Standard_GS5_multiNIC_No.json" />

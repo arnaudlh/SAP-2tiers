@@ -3,16 +3,19 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "sapSystemId": {
-            "value": "lab"
+            "value": "xsm"
         },
         "adminUsername": {
             "value": "arnaud"
         },
         "sapSystemSize": {
-            "value": "Large - 22.000 SAPS"
+            "value": "Xtra Small - 2.300 SAPS"
         },
         "subnetId": {
-            "value": "SAPLab"
+            "value": "xsm"
+        },
+        "storageType": {
+            "value": "Standard"
         }
     }
 }
