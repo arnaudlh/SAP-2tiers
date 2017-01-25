@@ -202,7 +202,7 @@
         "vmName": "[concat(variables('sidlower'), '-servercs')]",
         "storageAccountName": "[concat(variables('sidlower'), uniqueString(variables('sidlower'), resourceGroup().id))]",
         "vnetName": "[concat(variables('sidlower'), '-vnet')]",
-        "publicIpName": "[concat(variables('sidlower'), '-pib')]",
+        "publicIpName": "[concat(variables('sidlower'), '-pip')]",
         "nicName": "[concat(variables('sidlower'), '-nic')]",
         "nsgName": "[concat(variables('sidlower'), '-nsg-cs')]",
         "publicIPAddressType": "Dynamic",
