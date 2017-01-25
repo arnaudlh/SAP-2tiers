@@ -149,7 +149,7 @@
                     "size": "Standard_DS11_v2"
                 },
                 "Standard": {
-                    "size": "Standard_D11"
+                    "size": "Standard_D11_v2"
                 }
             },
             "Small - 4.400 SAPS": {
@@ -157,7 +157,7 @@
                     "size": "Standard_DS12_v2"
                 },
                 "Standard": {
-                    "size": "Standard_D12"
+                    "size": "Standard_D12_v2"
                 }
             },
             "Medium - 11.000 SAPS": {
@@ -165,7 +165,7 @@
                     "size": "Standard_DS14_v2"
                 },
                 "Standard": {
-                    "size": "Standard_D14"
+                    "size": "Standard_D14_v2"
                 }
             },
             "Large - 22.000 SAPS": {
@@ -173,7 +173,7 @@
                     "size": "Standard_DS15_v2"
                 },
                 "Standard": {
-                    "size": "Standard_D15"
+                    "size": "Standard_D15_v2"
                 }
             },
             "Extra large - 33.000 SAPS": {
@@ -181,7 +181,7 @@
                     "size": "Standard_GS5"
                 },
                 "Standard": {
-                    "size": "Standard_D14"
+                    "size": "Standard_D14_v2"
                 }
             }
         },

@@ -33,9 +33,10 @@
     <Content Include="Deploy-AzureResourceGroup.ps1" />
     <Content Include="shared\configureSAPVM.ps1" />
     <Content Include="shared\configureSAPVM.sh" />
-    <Content Include="shared\cs-server-Standard_D11_multiNIC_No.json" />
-    <Content Include="shared\cs-server-Standard_D13_multiNIC_No.json" />
-    <Content Include="shared\cs-server-Standard_D14_multiNIC_No.json" />
+    <Content Include="shared\cs-server-Standard_D11_v2_multiNIC_No.json" />
+    <Content Include="shared\cs-server-Standard_D13_v2_multiNIC_No.json" />
+    <Content Include="shared\cs-server-Standard_D14_v2_multiNIC_No.json" />
+    <Content Include="shared\cs-server-Standard_D12_v2_multiNIC_No.json" />
     <Content Include="shared\cs-server-Standard_DS12_v2_multiNIC_No.json" />
     <Content Include="shared\cs-server-Standard_DS11_v2_multiNIC_No.json" />
     <Content Include="shared\cs-server-Standard_DS13_v2_multiNIC_No.json" />
